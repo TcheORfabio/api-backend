@@ -4,23 +4,30 @@
   "description": "Teste de Backend API Restful ",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon run start"
+    "start": "node -r dotenv/config index.js",
+    "dev": "nodemon --exec npm start"
   },
   "author": "Fabio Silva",
   "license": "ISC",
   "dependencies": {
+    "boom": "^7.3.0",
     "hapi": "^18.1.0",
     "inert": "^5.1.2",
     "joi": "^14.3.1",
     "mongoose": "^5.4.20",
+    "shortid": "^2.2.14",
     "swagger": "^0.7.5",
+    "uuid": "^3.3.2",
     "vision": "^5.4.4"
   },
   "devDependencies": {
+    "dotenv": "^7.0.0",
     "eslint": "^5.15.3",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
     "nodemon": "^1.18.10"
+  },
+  "engines": {
+    "node": "10.13.0"
   }
 }
