@@ -39,6 +39,7 @@ const signIn = {
   config: {
     tags: ['api'],
     handler: controller.signIn,
+    auth: 'simple',
     validate: {
       options: {
         allowUnknown: true,
