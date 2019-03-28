@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const config = require('../config');
 
-const dbURI = process.env.DBURI;
+const dbURI = config.app.mongodbUri;
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
 mongoose.connect(dbURI,

@@ -44,7 +44,22 @@ const signIn = {
       options: {
         allowUnknown: true,
       },
-      query: schemas.signInSchema.request.signIn,
+    },
+  },
+};
+
+const searchUser = {
+  path: '/v1/user/{id}',
+  method: 'GET',
+  config: {
+    tags: ['api'],
+    handler: controller.searchUser,
+    auth: 'simple',
+    validate: {
+      options: {
+        allowUnknown: true,
+      },
+      params: schemas.searchUserSchema.request.searchUser,
     },
   },
 };
@@ -53,4 +68,5 @@ module.exports = {
   hello,
   signUp,
   signIn,
+  searchUser,
 };

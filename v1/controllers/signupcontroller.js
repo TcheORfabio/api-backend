@@ -3,7 +3,7 @@
 const Boom = require('boom');
 const shortId = require('shortid');
 const Bcrypt = require('bcryptjs');
-const tokenManager = require('../../jwt');
+const tokenManager = require('../../auth/jwt');
 const { schemas } = require('../../database');
 
 const { User } = schemas;
@@ -26,8 +26,6 @@ const signUp = async (req, res) => {
     phones: q.phones,
     lastLoginAt: Date.now(),
   };
-
-  console.log('User: %o', userData);
 
   try {
     const user = await User.findOneAndUpdate({ email: userData.email }, userData, { upsert: true, new: true });
