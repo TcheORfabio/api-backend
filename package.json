@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node -r dotenv/config index.js",
-    "dev": "nodemon --exec npm start"
+    "dev": "nodemon --exec npm start",
+    "test": "mocha --recursive"
   },
   "author": "Fabio Silva",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "hapi": "^18.1.0",
     "hapi-auth-basic": "^5.0.0",
     "inert": "^5.1.2",
+    "inject-then": "^2.0.9",
     "joi": "^14.3.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.4.20",
@@ -24,10 +26,12 @@
     "vision": "^5.4.4"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "dotenv": "^7.0.0",
     "eslint": "^5.15.3",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
+    "mocha": "^6.0.2",
     "nodemon": "^1.18.10"
   },
   "engines": {
