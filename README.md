@@ -10,9 +10,13 @@ npm install
 npm start
 
 ###############################################
+
 Exemplo do .env com as variaveis de ambiente necessárias para rodar o app
 
 DBURI=<sua_uri_mongo>
+
 SALT_ROUNDS=10
+
 JWT_SECRET=<segredo_do_jwt>
+
 PORT=10010
